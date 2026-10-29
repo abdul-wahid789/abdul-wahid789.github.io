@@ -1,5 +1,6 @@
 import AboutMe from "@/components/AboutMe"
 import Contact from "@/components/Contact"
+import Education from "@/components/Education"
 import Experience from "@/components/Experience"
 import Hero from "@/components/Hero"
 import Projects from "@/components/Projects"
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero/>
       <AboutMe/>
       <Skills/>
+      <Education/>
       <Experience/>
       <Projects/>
       <Contact/>
