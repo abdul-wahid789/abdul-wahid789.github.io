@@ -2,7 +2,8 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-/* @custom-variant dark (&:is(.dark *)); */
+/* 1. Enable class-based dark variant in Tailwind CSS v4 */
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
@@ -49,45 +50,35 @@
 }
 
 :root {
-  /* 1. Base Canvas: #F8FAFC (Slate 50) */
-  --background: hsl(210 40% 98%);
-  --foreground: oklch(27.9% 0.041 260.031);
+  /* --- LIGHT THEME (Default) --- */
+  --background: hsl(210 40% 98%); /* Slate 50 */
+  --foreground: hsl(222.2 47.4% 11.2%);
 
-  /* 2. Card Surface: #FFFFFF */
-  --card: hsl(0 0% 100%);
+  --card: hsl(0 0% 100%); /* Crisp Pure White */
   --card-foreground: hsl(222.2 47.4% 11.2%);
 
-  /* Popovers & Dropdowns */
   --popover: hsl(0 0% 100%);
   --popover-foreground: hsl(222.2 47.4% 11.2%);
 
-  /* 3. Primary Accent: Dusty Sage #059669 */
-  --primary: hsl(160 84% 39%);
+  --primary: hsl(160 84% 39%); /* Dusty Sage #059669 */
   --primary-foreground: hsl(0 0% 100%);
 
-  /* 4. Subtle Highlights / Badges (Light Emerald tint) */
-  --secondary: hsl(149 80% 96%);
+  --secondary: hsl(149 80% 96%); /* Light Sage Tint */
   --secondary-foreground: hsl(161 94% 24%);
 
-  /* Muted Text & Surfaces */
   --muted: hsl(210 40% 96.1%);
   --muted-foreground: hsl(215.4 16.3% 46.9%);
 
-  /* Accent & Hover */
   --accent: hsl(149 80% 96%);
   --accent-foreground: hsl(161 94% 24%);
 
-  /* Destructive states */
   --destructive: hsl(0 84.2% 60.2%);
-
-  /* 5. Borders & Inputs: #E2E8F0 (Slate 200) */
-  --border: hsl(214.3 31.8% 91.4%);
+  --border: hsl(214.3 31.8% 91.4%); /* Slate 200 */
   --input: hsl(214.3 31.8% 91.4%);
   --ring: hsl(160 84% 39%);
 
   --radius: 0.75rem;
 
-  /* Sidebar Tokens (Light Mode fallback) */
   --sidebar: hsl(0 0% 100%);
   --sidebar-foreground: hsl(222.2 47.4% 11.2%);
   --sidebar-primary: hsl(160 84% 39%);
@@ -97,7 +88,6 @@
   --sidebar-border: hsl(214.3 31.8% 91.4%);
   --sidebar-ring: hsl(160 84% 39%);
 
-  /* Charts */
   --chart-1: hsl(160 84% 39%);
   --chart-2: hsl(173 58% 39%);
   --chart-3: hsl(197 37% 24%);
@@ -105,50 +95,58 @@
   --chart-5: hsl(27 87% 67%);
 }
 
-/* .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-} */
+.dark {
+  /* --- DARK THEME (Sophisticated Midnight & Luminous Sage) --- */
+  --background: hsl(222.2 47.4% 7%); /* Deep Slate Canvas */
+  --foreground: hsl(210 40% 98%); /* Soft White Text */
+
+  --card: hsl(222.2 47.4% 10.5%); /* Elevated Dark Slate Card */
+  --card-foreground: hsl(210 40% 98%);
+
+  --popover: hsl(222.2 47.4% 10.5%);
+  --popover-foreground: hsl(210 40% 98%);
+
+  --primary: hsl(158 64% 50%); /* Bright Emerald / Sage Pop */
+  --primary-foreground: hsl(222.2 47.4% 7%);
+
+  --secondary: hsl(160 38% 14%); /* Subtle Dark Sage Pill/Chip */
+  --secondary-foreground: hsl(152 76% 75%);
+
+  --muted: hsl(217.2 32.6% 14%);
+  --muted-foreground: hsl(215 20.2% 65.1%);
+
+  --accent: hsl(160 38% 14%);
+  --accent-foreground: hsl(152 76% 75%);
+
+  --destructive: hsl(0 62.8% 50.6%);
+  --border: hsl(217.2 32.6% 18%); /* Subtle Dark Border */
+  --input: hsl(217.2 32.6% 18%);
+  --ring: hsl(158 64% 50%);
+
+  --sidebar: hsl(222.2 47.4% 9%);
+  --sidebar-foreground: hsl(210 40% 98%);
+  --sidebar-primary: hsl(158 64% 50%);
+  --sidebar-primary-foreground: hsl(222.2 47.4% 7%);
+  --sidebar-accent: hsl(160 38% 14%);
+  --sidebar-accent-foreground: hsl(152 76% 75%);
+  --sidebar-border: hsl(217.2 32.6% 18%);
+  --sidebar-ring: hsl(158 64% 50%);
+
+  --chart-1: hsl(158 64% 50%);
+  --chart-2: hsl(160 60% 45%);
+  --chart-3: hsl(197 37% 40%);
+  --chart-4: hsl(43 74% 66%);
+  --chart-5: hsl(27 87% 67%);
+}
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
   }
 }
-
-
 
 @keyframes gentle-float {
   0%, 100% {
