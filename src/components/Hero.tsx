@@ -51,7 +51,7 @@ export default function Hero() {
                     {/* Action CTAs */}
                     <div className="mt-8 flex flex-wrap items-center gap-3.5">
                         <Link
-                            href="#work"
+                            href="#projects"
                             className="group inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-medium text-primary-foreground shadow-xs transition-all hover:opacity-90 active:scale-98"
                         >
                             <FiFolder className="text-base" />

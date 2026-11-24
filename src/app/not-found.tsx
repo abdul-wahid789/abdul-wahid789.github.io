@@ -38,7 +38,7 @@ export default function NotFound() {
           </Link>
 
           <Link
-            href="/#work"
+            href="/project"
             className="inline-flex items-center gap-2 rounded-xl border border-border bg-background px-5 py-2.5 text-xs font-semibold text-foreground transition-all hover:border-primary hover:text-primary active:scale-95"
           >
             <FiArrowLeft className="text-sm" />

@@ -14,6 +14,73 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+    {
+    id: "mentor-lagbe",
+    index: "03",
+    category: "Full-Stack / EdTech",
+    name: "Mentor Lagbe",
+    subtitle:
+      "Role-based tuition and mentorship marketplace with admin moderation and Stripe subscriptions.",
+    image: "/projects/mentor-lagbe.png",
+    description:
+      "A full-stack tuition management platform connecting students, tutors, and administrators in dedicated workspaces. Built with a Next.js App Router frontend and a serverless Express.js and MongoDB Atlas API, it features Better Auth with Google OAuth and remote JWKS verification, Stripe Checkout for Pro memberships, ImgBB banner/avatar uploads, and end-to-end tuition moderation.",
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "BetterAuth",
+      "Express.js",
+      "MongoDB",
+      "Stripe",
+    ],
+    liveUrl: "https://mentor-lagbe-client-ashen.vercel.app/",
+    githubUrl: "https://github.com/abdul-wahid789/mentor-lagbe",
+    challenges: [
+      "Decoupling authentication between Next.js and Express.js by verifying Better Auth JWTs against a remote JWKS endpoint with jose, paired with role-based access control (student, tutor, admin) across Next.js route proxy and Express middleware.",
+      "Enforcing subscription quotas—limiting Free Tutors to 2 tuition posts and Free Students to 5 bookmarks—while unlocking unlimited access after Stripe Checkout and syncing MongoDB Pro plan status with the client session.",
+      "Designing a multi-role moderation and feedback pipeline where admins approve or reject tuitions with required rejection notes, tutors manage applicants and edit ImgBB-hosted banners, and students can only review tuitions with accepted applications.",
+    ],
+    improvements: [
+      "Add Stripe webhook signature verification to handle asynchronous events such as recurring billing, failed payments, and refunds automatically.",
+      "Move tuition catalog search, multi-filter queries (subject, mode, fee range), and pagination to the Express/MongoDB backend for large datasets.",
+      "Add real-time in-app or email notifications when a tuition post is approved/rejected or when a student's application status updates.",
+    ],
+  },
+    {
+    id: "booknook",
+    index: "02",
+    category: "Full-Stack / Community",
+    name: "BookNook",
+    subtitle:
+      "Decoupled community library platform for sharing, borrowing, and tracking books.",
+    image: "/projects/booknook.png",
+    description:
+      "A full-stack community library web application built to make sharing, borrowing, and managing books effortless. It pairs a Next.js App Router frontend with a serverless Express.js and MongoDB Atlas API, featuring Better Auth with remote JWKS verification, real-time copy inventory tracking, and due-date management.",
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "BetterAuth",
+      "Express.js",
+      "MongoDB",
+    ],
+    liveUrl: "https://booknook-rust.vercel.app/",
+    githubUrl: "https://github.com/abdul-wahid789/booknook",
+    challenges: [
+      "Decoupling authentication between the Next.js frontend and Express.js backend by verifying Better Auth JWTs against a remote JWKS endpoint using jose.",
+      "Preventing stock inconsistencies and duplicate borrows by dynamically updating available copies and blocking deletion of books with active borrow records.",
+      "Designing MongoDB aggregation pipelines ($lookup, $match, $unwind) to efficiently join active borrow records with book metadata and sort by return due dates.",
+    ],
+    improvements: [
+      "Wrap borrow and return operations in MongoDB multi-document transactions to guarantee atomic inventory updates under concurrent requests.",
+      "Add automated email or in-app reminders for upcoming and overdue book return dates.",
+      "Implement full-text search, category/author filtering, and pagination on the /books catalog endpoint.",
+    ],
+  },
   {
     id: "bazar-dor",
     index: "01",

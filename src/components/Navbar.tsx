@@ -7,11 +7,11 @@ import { FiArrowUpRight, FiMenu, FiX } from "react-icons/fi";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Education", href: "#education" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
+  { name: "About", href: "/#about" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Education", href: "/#education" },
+  { name: "Experience", href: "/#experience" },
+  { name: "Projects", href: "/#projects" },
 ];
 
 export default function Navbar() {
@@ -57,7 +57,7 @@ export default function Navbar() {
 
             {/* Let's Talk CTA */}
             <Link
-              href="#contact"
+              href="/#contact"
               className="group flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground transition-all hover:border-primary hover:bg-secondary/60 hover:text-primary hover:shadow-xs"
             >
               <span>Let&apos;s talk</span>
@@ -71,7 +71,7 @@ export default function Navbar() {
           <ThemeToggle />
 
           <Link
-            href="#contact"
+            href="/#contact"
             className="flex items-center gap-1 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
           >
             <span>Talk</span>
