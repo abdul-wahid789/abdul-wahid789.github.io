@@ -12,29 +12,29 @@ export default function Footer() {
     };
 
     return (
-        <footer className="w-full border-t border-border bg-foreground py-8">
+        <footer className="w-full border-t border-border bg-foreground py-8 text-background transition-colors duration-300 dark:bg-card dark:text-foreground">
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-xs sm:flex-row sm:px-6">
 
                 {/* Left: Identity & Title */}
                 <div className="flex items-center gap-2.5 flex-col lg:flex-row">
-                    <span className="font-semibold text-background">
+                    <span className="font-semibold">
                         Abdul Wahid
                     </span>
-                    <span className="text-background/40 hidden lg:block">•</span>
-                    <span className="text-background">
+                    <span className="hidden text-background/40 lg:block dark:text-muted-foreground">•</span>
+                    <span className="text-background/80 dark:text-muted-foreground">
                         Full Stack Web Developer
                     </span>
                 </div>
 
                 {/* Center: Copyright & Attribution */}
-                <p className="text-background text-center">
+                <p className="text-center text-background/80 dark:text-muted-foreground">
                     &copy; 2026 Abdul Wahid. Built with Next.js &amp; Tailwind CSS.
                 </p>
 
                 {/* Right: Smooth Scroll to Top */}
                 <button
                     onClick={scrollToTop}
-                    className="group inline-flex items-center gap-1.5 font-medium text-background transition-colors hover:text-primary active:scale-95"
+                    className="group inline-flex items-center gap-1.5 font-medium transition-colors hover:text-primary active:scale-95"
                     aria-label="Back to top"
                 >
                     <span>Back to top</span>
